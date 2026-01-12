@@ -1,0 +1,29 @@
+Login: Use admin@certman.io / admin123 or register a new account.
+
+Attack: Issue a certificate with <script>alert('XSS_Hacked')</script> in the Degree field.
+
+Verify: Go to the "Verify" tab, enter the generated ID, and click scan.
+
+Defense: Toggle the "Security Patch" and re-verify to show the mitigation.
+
+
+---
+
+### 2. Dependency File (`package.json`)
+Create this file to manage your Node.js environment.
+
+```json
+{
+  "name": "cert-man",
+  "version": "1.0.0",
+  "description": "Blockchain Certificate Verification Vulnerable App",
+  "main": "server/server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7"
+  }
+}
